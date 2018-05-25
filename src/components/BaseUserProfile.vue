@@ -26,7 +26,6 @@
 <!-- Scoped to limit CSS to this component only -->
 <style scoped>
   .row {
-    border: 1px solid #ababab;
     height: 96px;
     width: 728px;
     margin: auto;
@@ -34,7 +33,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 3px 4px #d4d4d4;
   }
   .left{
     display: inline-flex;
