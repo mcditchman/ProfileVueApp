@@ -1,13 +1,13 @@
 <template>
   <div class="row">
     <div class="left">
-      <img src="../assets/logo.png">
-      <span class="name">Cole Ditchman</span>
+      <img :class="user.person.gender" v-bind:src="avatarUrl">
+      <span class="name">{{`${user.person['given-name']} ${user.person['family-name']}`}}</span>
     </div>
     <div class="address">
-      <p class="line1">1589 Wade Avenue</p>
-      <p class="line2">Raleigh, North Carolina</p>
-      <p class="line3">27609</p>
+      <p class="line1">{{`${user.person.address['street-number']} ${user.person.address['street-name']}`}}</p>
+      <p class="line2">{{`${user.person.address.city}, ${user.person.address.state}`}}</p>
+      <p class="line3">{{user.person.address.zip}}</p>
     </div>
   </div>
 
@@ -16,10 +16,9 @@
 <script>
   export default {
     name: 'BaseUserProfile',
-    data () {
-      return {
-        msg: ''
-      }
+    props: {
+      user: Object,
+      avatarUrl: String
     }
   }
 </script>
@@ -27,7 +26,7 @@
 <!-- Scoped to limit CSS to this component only -->
 <style scoped>
   .row {
-    border: 1px solid black;
+    border: 1px solid #ababab;
     height: 96px;
     width: 728px;
     margin: auto;
@@ -35,15 +34,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 3px 4px #d4d4d4;
   }
   .left{
     display: inline-flex;
     align-items: center;
   }
   img {
-    border: 4px solid #ee4494;
     width: 88px;
     height: 88px;
+  }
+  .male{
+    border: 4px solid #37d5fe;
+  }
+  .female{
+    border: 4px solid #ee4494;
   }
   .name {
     font-family: "Arial Bold";
