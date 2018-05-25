@@ -52,12 +52,14 @@
     font-family: "Arial Bold";
     font-size: 36px;
     margin-left: 10px;
+    color: #575757;
   }
   .address {
     top: auto;
     font-family: "Arial Regular";
     font-size: 18px;
     margin-right: 19px;
+    color: #575757;
   }
   .address p{
     margin: 2px 0px 2px 0px;
