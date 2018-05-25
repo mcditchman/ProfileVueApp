@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="logo.png">
     <h1>{{ msg }}</h1>
     <Profile
       v-bind:user="user"
