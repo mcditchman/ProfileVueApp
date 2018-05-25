@@ -1,6 +1,6 @@
 # User Profile Vue App
 
-> A Vue.js project that hits API endpoint to retrieve user profile details and displays it on the page
+> A Vue.js project that queries API endpoint to retrieve user profile details and displays it on the page
 
 ## Build Setup
 
