@@ -18,7 +18,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'PointSource User Profile',
+      msg: 'User Profile',
       user: null
     }
   },
@@ -27,11 +27,11 @@ export default {
   },
   computed:{
     newAvatarUrl(){
-      return `http://applicant.pointsource.us${this.user.person.imageURL}`
+      return `http://c.hexotic.com${this.user.person.imageURL}`
     }
   },
   created() {
-    fetch("http://applicant.pointsource.us/api/testUser/5733a7337e3d61136595a0c9")
+    fetch("http://c.hexotic.com/api/testUser/5733a7337e3d61136595a0c9")
       .then(response => response.json())
       .then((data) =>{
         this.user = data;
